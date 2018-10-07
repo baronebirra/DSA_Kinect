@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/00_Splash.unity
+    guid: d36cf49f96ea36b438c4c394dd7e3edc
+  - enabled: 1
+    path: Assets/_Scenes/00b_Login.unity
+    guid: 232cff8ced5e1dd47a23fc2982af3b6b
+  - enabled: 1
+    path: Assets/_Scenes/01a_StartMenu.unity
+    guid: 2c102d2be1bf8124aa8517eb212b99a1
+  - enabled: 1
+    path: Assets/_Scenes/01b_Options.unity
+    guid: 08fb84646badcf348bc087e46dbe4507
+  - enabled: 1
+    path: Assets/_Scenes/02a_StartBubble.unity
+    guid: 2501844af7f2f4846b6e15475ef9fa87
+  - enabled: 1
+    path: Assets/_Scenes/02b_Ranking.unity
+    guid: 8be74ef4c50f38a4aa760c13587648fa
+  - enabled: 1
+    path: Assets/_Scenes/02c_Countdown.unity
+    guid: 7672e796e5ea5dd48a9eec3c9151191f
+  - enabled: 1
+    path: Assets/_Scenes/03a_GameBubble.unity
+    guid: 187a7cbe55b52bc4e93df6c2d777ed46
+  - enabled: 1
+    path: Assets/_Scenes/04_LoseBubble.unity
+    guid: 64478292d8da2e24dab6af94135fd1fe
+  - enabled: 1
+    path: Assets/_Scenes/05a_StartKA.unity
+    guid: ddeac9800ea8c644d82f55c56324e864
+  - enabled: 1
+    path: Assets/_Scenes/05b_Ranking.unity
+    guid: bd7ac93316bb27a4da5d031165c2bfb9
+  - enabled: 1
+    path: Assets/_Scenes/05c_Countdown.unity
+    guid: 2aebd6dbaece0d141ac6340c2c6e85fa
+  - enabled: 1
+    path: Assets/_Scenes/06_GameKA.unity
+    guid: 81a1eb21dd6282946ac70a18cd3b4730
+  - enabled: 1
+    path: Assets/_Scenes/07_LoseKA.unity
+    guid: 88142f14cf6cd064cae9c00f8f50f973
+  - enabled: 1
+    path: Assets/_Scenes/08a_StartShape.unity
+    guid: 5918822db988ece498a319682f891ad7
+  - enabled: 1
+    path: Assets/_Scenes/08b_Ranking.unity
+    guid: aca2c85d9cb64754b89d30ba3f7ad124
+  - enabled: 1
+    path: Assets/_Scenes/08c_Countdown.unity
+    guid: 1b54d4ddb03627f419c6dfb2366bbfc6
+  - enabled: 1
+    path: Assets/_Scenes/09_GameShape.unity
+    guid: 378d8558826b4c54aacded74a1aca576
+  - enabled: 1
+    path: Assets/_Scenes/10_LoseShape.unity
+    guid: 0dac6792bdfa6964b8ff8061d28d4bb9
