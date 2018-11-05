@@ -5,16 +5,18 @@ using UnityEngine;
 public class CollidingBodyPart : MonoBehaviour {//script che gestisce la collisione tra l'avatar e il target
     public int bodyPartNumber;
 
-    //private LevelManager levelManager;
+    private AudioClip shapeCompletedAudio;
+    private float volume;
     private TargetManager targetManager;
     private ShapeProgress shapeProgress, shapeProgressC;
     private float winningPercentage;
 
     private void Start() {
-        //levelManager = FindObjectOfType<LevelManager>();
         targetManager = FindObjectOfType<TargetManager>();
         shapeProgress = GameObject.Find("Percentage").GetComponent<ShapeProgress>();
         shapeProgressC = GameObject.Find("ShapeCompleted").GetComponent<ShapeProgress>();
+        volume = PlayerPrefsManager.GetEffectVolume();
+        shapeCompletedAudio = Resources.Load<AudioClip>("242501__gabrielaraujo__powerup-success");
 
         winningPercentage = RemoteVariables.shape_winningPercentage;
     }
@@ -35,6 +37,7 @@ public class CollidingBodyPart : MonoBehaviour {//script che gestisce la collisi
 
 
     void ShapeCompleted() {
+        AudioSource.PlayClipAtPoint(shapeCompletedAudio, transform.position, volume);
         Shape.Reset();                   //se finito tutte le figure allora win altrimenti disabilita avatar e attiva il prossimo
         targetManager.NextTarget();
         shapeProgressC.ShapeCompleted();

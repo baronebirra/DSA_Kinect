@@ -16,6 +16,7 @@ public class RemoteVariables : MonoBehaviour {//script per la gestione delle var
     public float keepAttention_defaultFrequency = 1f;
     public float keepAttention_defaultContrast = 1f;
     public float keepAttention_defaultDiagonalTrajectoryPercentage = 0f;
+    public float keepAttention_defaultTargetSpawnPercentage = 0.75f;
     public int keepAttention_defaultLife = 3;
 
     public float shape_defaultGameTime = 100f;
@@ -45,6 +46,7 @@ public class RemoteVariables : MonoBehaviour {//script per la gestione delle var
     public static float keepAttention_contrastGoodTarget { get; private set; }
     public static float keepAttention_contrastBadTarget { get; private set; }
     public static float keepAttention_diagonalTrajectoryPercentage { get; private set; }
+    public static float keepAttention_targetSpawnPercentage { get; private set; }
     public static int keepAttention_life { get; private set; }
     public static bool keepAttention_leftBot { get; private set; }
     public static bool keepAttention_leftTop { get; private set; }
@@ -61,7 +63,6 @@ public class RemoteVariables : MonoBehaviour {//script per la gestione delle var
     public static List<int> keepAttention_spawnAreaEnabled = new List<int>();
 
     private void Start() {
-        Debug.LogWarning("entrato");
         bubble_persistence = bubble_defaultPersistence;
         bubble_contrast = bubble_defaultContrast;
         bubble_frequency = bubble_defaultFrequency;
@@ -75,6 +76,8 @@ public class RemoteVariables : MonoBehaviour {//script per la gestione delle var
         keepAttention_frequencyGoodTarget = keepAttention_frequencyBadTarget = keepAttention_defaultFrequency;
         keepAttention_contrastGoodTarget = keepAttention_contrastBadTarget = keepAttention_defaultContrast;
         keepAttention_life = keepAttention_defaultLife;
+        keepAttention_targetSpawnPercentage = keepAttention_defaultTargetSpawnPercentage;
+        keepAttention_diagonalTrajectoryPercentage = keepAttention_defaultDiagonalTrajectoryPercentage;
 
         shape_gameTime = shape_defaultGameTime;
         shape_winningPercentage = shape_defaultWinningPercentage;
@@ -113,6 +116,7 @@ public class RemoteVariables : MonoBehaviour {//script per la gestione delle var
         keepAttention_contrastGoodTarget = RemoteSettings.GetFloat("keepAttention_contrastGoodTarget", keepAttention_defaultContrast);
         keepAttention_contrastBadTarget = RemoteSettings.GetFloat("keepAttention_contrastBadTarget", keepAttention_defaultContrast);
         keepAttention_diagonalTrajectoryPercentage = RemoteSettings.GetFloat("keepAttention_diagonalTrajectoryPercentage", keepAttention_defaultDiagonalTrajectoryPercentage);
+        keepAttention_targetSpawnPercentage = RemoteSettings.GetFloat("keepAttention_targetSpawnPercentage", keepAttention_defaultTargetSpawnPercentage);
         keepAttention_life = RemoteSettings.GetInt("keepAttention_life", keepAttention_defaultLife);
 
         shape_gameTime = RemoteSettings.GetFloat("shape_gameTime", shape_defaultGameTime);

@@ -281,6 +281,7 @@ MonoBehaviour:
   pwdInputField: {fileID: 1538762610}
   levelManager: {fileID: 114240062825257636, guid: c576abe7ebf43734e92ccde49c6dbda0,
     type: 2}
+  errortext: {fileID: 1913238213}
 --- !u!4 &720738916
 Transform:
   m_ObjectHideFlags: 0
@@ -1133,7 +1134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1720981450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1145,7 +1146,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2112595038}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1163,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41563ca383d3a4648a6170823ff4185a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInTime: 2
+  fadeInTime: 1
 --- !u!114 &1720981452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,6 +1346,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864639827}
+--- !u!1 &1913238211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1913238212}
+  - component: {fileID: 1913238214}
+  - component: {fileID: 1913238213}
+  m_Layer: 5
+  m_Name: ErrorText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1913238212
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913238211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2112595038}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.675, y: 143.5}
+  m_SizeDelta: {x: 545.35, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1913238213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913238211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 44
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Inserire nome utente
+--- !u!222 &1913238214
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913238211}
 --- !u!1 &2112595034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1511,7 @@ RectTransform:
   - {fileID: 1166437809}
   - {fileID: 922302517}
   - {fileID: 1538762609}
+  - {fileID: 1913238212}
   - {fileID: 1720981450}
   m_Father: {fileID: 0}
   m_RootOrder: 1

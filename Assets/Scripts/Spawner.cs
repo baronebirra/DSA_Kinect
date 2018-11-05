@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour {//script che gestisce la comparsa dei targ
     private float screenDimensionX, screenDimensionY;
     private float frequencyGoodTarget, frequencyBadTarget;
     private float speedGoodTarget, speedBadTarget;
-    private float diagonalTrajectoryPercentage;
+    private float diagonalTrajectoryPercentage, targetSpawnPercentage;
     private Vector3 botLeft, topRight, boundGT, boundBT;
 
     // Use this for initialization
@@ -27,6 +27,7 @@ public class Spawner : MonoBehaviour {//script che gestisce la comparsa dei targ
         speedGoodTarget = RemoteVariables.keepAttention_speedGoodTarget;
         speedBadTarget = RemoteVariables.keepAttention_speedBadTarget;
         diagonalTrajectoryPercentage = RemoteVariables.keepAttention_diagonalTrajectoryPercentage;
+        targetSpawnPercentage = RemoteVariables.keepAttention_targetSpawnPercentage;
         //volume = PlayerPrefsManager.GetEffectVolume();
 
         totTargetLB = totTargetLT = totTargetTL = totTargetTR = totTargetRT = totTargetRB = 0;
@@ -77,7 +78,7 @@ public class Spawner : MonoBehaviour {//script che gestisce la comparsa dei targ
     }
 
     int GetIndexPrefab() {//restituisce in modo casuale l'indice del prefab che poi verrà generato
-        if (Random.Range(0.0f, 1.0f) < 0.75f)//per ora la percentuale è di 0.75 sul primo elemento da capire come dividere le probabilità e quanti target creare
+        if (Random.Range(0.0f, 1.0f) < targetSpawnPercentage)//se il numero casuale è minore di targetSpawnPercentage allora crea il primo target altrimenti il secondo, da cambiare se aggiungiamo più target
             return 0;
         else
             return 1;

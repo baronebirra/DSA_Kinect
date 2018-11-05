@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShapeProgress : MonoBehaviour {//script che aggiorna la percentuale di completamento e le figure completate
     public static int percentage;
     public static int shapeCompleted;
+
     private Text text;
 
     // Use this for initialization

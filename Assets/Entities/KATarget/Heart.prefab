@@ -152,3 +152,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 0
   lifeUP: 1
+  hitGoodTarget: {fileID: 8300000, guid: bf1ad0c92e7abb140a84f3875c3ef2d0, type: 3}

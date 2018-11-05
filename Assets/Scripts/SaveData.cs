@@ -17,7 +17,7 @@ public class SaveData : MonoBehaviour {
 
         switch (gameN) {
             case 1://bubble
-                fileName = date.ToString("yyyy-MM-dd_HH-mm-ss") + "_Bubble.csv";
+                fileName = date.ToString("yyyy-MM-dd_HH-mm-ss") + "_Bubble_" + LoginManager.username + ".csv";
                 filePath = getPath();
 
                 //writer = File.CreateText(filePath);// new StreamWriter(Application.persistentDataPath + "/" + fileName);
@@ -25,7 +25,7 @@ public class SaveData : MonoBehaviour {
 
                 writer.WriteLine("Scheda uscita dati, Administrator: ");
                 writer.WriteLine("Nome operatore: ");
-                writer.WriteLine("Nome giocatore: " + LoginManager.name + "," + "Data: " + date.ToString("dd/MM/yyyy") + "," + "Orario: " + date.ToString("HH:mm:ss"));
+                writer.WriteLine("Nome giocatore: " + LoginManager.username + "," + "Data: " + date.ToString("dd/MM/yyyy") + "," + "Orario: " + date.ToString("HH:mm:ss"));
                 writer.WriteLine("Gioco: Bubble");
                 writer.WriteLine("Tempo di gioco,Bolle presentate in totale,Frequenza di comparsa della bolla,Contrasto,Persistenza bolla," +
                     "Bolle presentate in alto a sinistra,Bolle presentate in alto al centro,Bolle presentate in alto a destra," +
@@ -47,13 +47,13 @@ public class SaveData : MonoBehaviour {
 
                 break;
             case 2://KA
-                fileName = date.ToString("yyyy-MM-dd_HH-mm-ss") + "_KeepAttention.csv";
+                fileName = date.ToString("yyyy-MM-dd_HH-mm-ss") + "_KeepAttention_" + LoginManager.username + ".csv";
                 filePath = getPath();
                 writer = new StreamWriter(filePath, false, System.Text.Encoding.UTF8);
 
                 writer.WriteLine("Scheda uscita dati, Administrator: ");
                 writer.WriteLine("Nome operatore: ");
-                writer.WriteLine("Nome giocatore: " + LoginManager.name + "," + "Data: " + date.ToString("dd/MM/yyyy") + "," + "Orario: " + date.ToString("HH:mm:ss"));
+                writer.WriteLine("Nome giocatore: " + LoginManager.username + "," + "Data: " + date.ToString("dd/MM/yyyy") + "," + "Orario: " + date.ToString("HH:mm:ss"));
                 writer.WriteLine("Gioco: Keep Attention");
                 writer.WriteLine("Tempo di gioco,Frequenza target +,Frequenza target -,Velocità target +,Velocità target -,% Traiettoria obliqua," +
                     "Contrasto target +,Contrasto target -,Vite a disposizione,Punteggio raggiunto,Target che arrivano da sinistra(parte bassa)," +
@@ -73,13 +73,13 @@ public class SaveData : MonoBehaviour {
 
                 break;
             case 3://shape
-                fileName = date.ToString("yyyy-MM-dd_HH-mm-ss") + "_Shape.csv";
+                fileName = date.ToString("yyyy-MM-dd_HH-mm-ss") + "_Shape_" + LoginManager.username + ".csv";
                 filePath = getPath();
                 writer = new StreamWriter(filePath, false, System.Text.Encoding.UTF8);
 
                 writer.WriteLine("Scheda uscita dati, Administrator: ");
                 writer.WriteLine("Nome operatore: ");
-                writer.WriteLine("Nome giocatore: " + LoginManager.name + "," + "Data: " + date.ToString("dd/MM/yyyy") + "," + "Orario: " + date.ToString("HH:mm:ss"));
+                writer.WriteLine("Nome giocatore: " + LoginManager.username + "," + "Data: " + date.ToString("dd/MM/yyyy") + "," + "Orario: " + date.ToString("HH:mm:ss"));
                 writer.WriteLine("Gioco: Shape");
                 writer.WriteLine("Tempo di gioco,Livello di difficoltà,Numero figure proposte,Figure realizzate");
                 writer.WriteLine(RemoteVariables.shape_gameTime.ToString() + "," + "," + "," + ShapeProgress.shapeCompleted.ToString());

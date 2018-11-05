@@ -8,13 +8,23 @@ public class LoginManager : MonoBehaviour {
     public InputField userInputField;
     public InputField pwdInputField;
     public LevelManager levelManager;
-    public static string name;
+    public Text errortext;
+    public static string username;
 
     public void Login() {
-        name = userInputField.text;
-        Debug.Log("user name: " + name);
-        Analytics.CustomEvent("newUser", new Dictionary<string, object> { { "nome", name } });
-        levelManager.LoadNextLevel();
+        username = userInputField.text;
+        if (string.IsNullOrEmpty(username)) {
+            errortext.gameObject.SetActive(true);
+            Debug.LogError("Nome utente non valido");
+        }
+
+        else {
+            errortext.gameObject.SetActive(false);
+            Debug.Log("user name: " + username);
+            Analytics.CustomEvent("newUser", new Dictionary<string, object> { { "nome", username } });
+            levelManager.LoadNextLevel();
+        }
+
     }
 
     void Update() {

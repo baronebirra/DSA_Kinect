@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - userName
+  - HandRx
+  - FootLx
+  - HandLx
+  - FootRx
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -13,27 +19,27 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - LeftHand
+  - RightHand
+  - LeftFoot
+  - RightFoot
+  - Bubble
+  - BubbleArea
+  - GoodTarget
+  - BadTarget
+  - Head
+  - HandL
+  - HandR
+  - ElbowL
+  - ElbowR
+  - ShoulderL
+  - ShoulderR
+  - HipL
+  - HipR
+  - KneeL
+  - KneeR
+  - FootL
+  - FootR
   - 
   - 
   - 

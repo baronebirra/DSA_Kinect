@@ -151,3 +151,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeDown: 1
+  hitBadTarget: {fileID: 8300000, guid: e5461a5cf5d0403449747da4f140aa83, type: 3}

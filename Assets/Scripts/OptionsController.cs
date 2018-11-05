@@ -7,6 +7,7 @@ public class OptionsController : MonoBehaviour { //script che gestisce le opzion
     public LevelManager levelManager;
     public Slider volumeSlider;
     public Slider volumeEffectSlider;
+    public Toggle skeletonToggle;
 
     private MusicManager musicManager;
 
@@ -15,6 +16,7 @@ public class OptionsController : MonoBehaviour { //script che gestisce le opzion
         musicManager = GameObject.FindObjectOfType<MusicManager>();
         volumeSlider.value = PlayerPrefsManager.GetMasterVolume();
         volumeEffectSlider.value = PlayerPrefsManager.GetEffectVolume();
+        skeletonToggle.isOn = PlayerPrefsManager.GetSkeleton();
     }
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class OptionsController : MonoBehaviour { //script che gestisce le opzion
     public void SaveAndExit() {//funzione che viene chiamata all'uscita dalla scena, aggiorna i valori selezionati dall'utente e carica la scena giusta
         PlayerPrefsManager.SetMasterVolume(volumeSlider.value);
         PlayerPrefsManager.SetEffectVolume(volumeEffectSlider.value);
+        PlayerPrefsManager.SetSkeleton(skeletonToggle.isOn);
 
         levelManager.LoadLevel("01a_StartMenu");
     }
@@ -32,5 +35,6 @@ public class OptionsController : MonoBehaviour { //script che gestisce le opzion
     public void SetDefault() {//si resettano i valori delle opzioni a quelle di default
         volumeSlider.value = 0.8f;
         volumeEffectSlider.value = 0.8f;
+        skeletonToggle.isOn = true;
     }
 }
